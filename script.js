@@ -507,8 +507,8 @@ const dados = [
   {
     data: "2023-12-25",
     valor: 100,
-    texto: "entrei aqui minha linda",
-    link: "audio/lua.mp3",
+    texto: "Você faz com que cada dia seja especial.",
+    link: "sorrisomaroto-sinais/mp3",
   },
 ];
 
@@ -568,22 +568,6 @@ function addTime(e) {
     if (armazenaDia <= compara.valor) {
       if (date == compara.data) {
         texto.textContent = compara.texto;
-
-        console.log(compara.link);
-        console.log(compara.texto);
-
-        const sources = document.querySelectorAll("audio source");
-        for (const source of sources) {
-          const src = source.src;
-          console.log(src); // "audio/lua.mp3"
-
-          const path = src.slice(0, src.length);
-          const filename = "nova-musica.mp3";
-
-          const newSrc = `${path}/${filename}`;
-          console.log(newSrc)
-        }
-
         return null;
       }
     } else texto.textContent = "Data aceitas de 25/12/2023 até 04/04/2024";

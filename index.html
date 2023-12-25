@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bom dia!</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="container">
+        <h5>ESCOLHA UMA DATA</h5>
+        <form id="addDate">
+            <input type="date" name="date" id="date">
+            <input display="none" type="hidden" name="time" id="time">
+            <button id="start" type="submit">START</button>
+
+            <audio id="meuAudio" autoplay loop>
+                <source src="audio/sinais-sorriso-maroto.mp3" type="audio/mpeg">
+            </audio>
+        </form>
+
+
+        <p class="Mensagem">Mensagem: <span id="until"></span></p>
+
+        <h1>RAZÕES PARA TE AMAR</h1>
+        <p id="conteudo">Mensagem: </p>
+        <div class="boxes">
+            <div class="box">
+                <span id="days">-</span>
+                <p>DIAS</p>
+            </div> <!-- box -->
+
+            <div class="box">
+                <span id="hours">-</span>
+                <p>HORAS</p>
+            </div> <!-- box -->
+
+            <div class="box">
+                <span id="minutes">-</span>
+                <p>MINUTOS</p>
+            </div> <!-- box -->
+
+            <div class="box">
+                <span id="seconds">-</span>
+                <p>SEGUNDOS</p>
+            </div> <!-- box -->
+
+        </div> <!-- boxes -->
+    </div> <!-- container -->
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

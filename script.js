@@ -487,28 +487,29 @@ const dados = [
   {
     data: "2023-12-29",
     valor: 96,
-    texto: "",
+    texto: "teste 3",
   },
   {
     data: "2023-12-28",
     valor: 97,
-    texto: "estou gostando",
+    texto: "teste 2",
   },
   {
     data: "2023-12-27",
     valor: 98,
-    texto: "oi deu certo",
+    texto: "teste 1",
   },
   {
     data: "2023-12-26",
     valor: 99,
-    texto: "teste",
+    texto: "Seu sorriso ilumina meu dia.",
+    link: "separacao-exalta-samba",
   },
   {
     data: "2023-12-25",
     valor: 100,
     texto: "Você faz com que cada dia seja especial.",
-    link: "sorrisomaroto-sinais/mp3",
+    link: "sinais-sorriso-maroto",
   },
 ];
 
@@ -546,7 +547,7 @@ function comparaDatas() {
   let texto = document.getElementById("conteudo");
 
   dados.forEach((compara) => {
-    if (compara.valor == armazenaDia - 0) {
+    if (compara.valor == armazenaDia) {
       texto.textContent = compara.texto;
       return compara.texto;
     }
@@ -561,13 +562,35 @@ function addTime(e) {
   let armazenaDia = counting();
   let texto = document.getElementById("until");
 
-  const audio = document.querySelector("audio");
-  audio.play();
+  const audio = document.querySelector('audio');
+  if (audio) {
+    audio.stop();
+    let button = document.getElementById("start");
+    button.innerHTML = "START";
+  } else {
+    let button = document.getElementById("start");
+    button.innerHTML = "STOP";
+  }
+
+  let audioElement = document.createElement('audio');
+  audioElement.autoplay = true;
+  audioElement.loop = true;
+
+
+  let sourceElement = document.createElement('source');
+  sourceElement.type = 'audio/mpeg';
+
+  audioElement.appendChild(sourceElement);
+  document.body.appendChild(audioElement);
 
   dados.forEach((compara) => {
     if (armazenaDia <= compara.valor) {
       if (date == compara.data) {
+        console.log(texto)
         texto.textContent = compara.texto;
+
+        audioElement.id = compara.link;
+        sourceElement.src = `audio/${compara.link}.mp3`;
         return null;
       }
     } else texto.textContent = "Data aceitas de 25/12/2023 até 04/04/2024";

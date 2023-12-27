@@ -585,7 +585,7 @@ function addTime(e) {
   document.body.appendChild(audioElement);
 
   dados.forEach((compara) => {
-    if (armazenaDia -1 <= compara.valor) {
+    if (armazenaDia <= compara.valor) {
       if (date == compara.data) {
         console.log(texto)
         texto.textContent = compara.texto;

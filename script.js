@@ -497,7 +497,8 @@ const dados = [
   {
     data: "2023-12-27",
     valor: 98,
-    texto: "teste 1",
+    texto: "Sua determinação é inspiradora.",
+    link: "velocidadeLuz-grupoRevelacao",
   },
   {
     data: "2023-12-26",
@@ -584,7 +585,7 @@ function addTime(e) {
   document.body.appendChild(audioElement);
 
   dados.forEach((compara) => {
-    if (armazenaDia <= compara.valor) {
+    if (armazenaDia -1 <= compara.valor) {
       if (date == compara.data) {
         console.log(texto)
         texto.textContent = compara.texto;

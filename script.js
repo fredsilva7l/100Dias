@@ -472,22 +472,26 @@ const dados = [
   {
     data: "2024-01-01",
     valor: 93,
-    texto: "",
+    texto: "Você torna a vida uma aventura constante.",
+    link: "duas-dilsinho",
   },
   {
     data: "2023-12-31",
     valor: 94,
-    texto: "",
+    texto: "Admiro sua dedicação aos seus princípios e valores.",
+    link: "insegurança-pixote",
   },
   {
     data: "2023-12-30",
     valor: 95,
-    texto: "",
+    texto: "Você transforma os momentos simples em lembranças preciosas.",
+    link: "farolEstrelas-Soweto",
   },
   {
     data: "2023-12-29",
     valor: 96,
-    texto: "teste 3",
+    texto: "Você me faz querer ser uma pessoa melhor todos os dias.",
+    link: "camisa10-turmaPagode",
   },
   {
     data: "2023-12-28",

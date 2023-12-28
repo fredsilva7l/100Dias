@@ -492,7 +492,8 @@ const dados = [
   {
     data: "2023-12-28",
     valor: 97,
-    texto: "teste 2",
+    texto: "Você faz até as tarefas mais simples parecerem especiais.",
+    link: "melhorIr-Pericles",
   },
   {
     data: "2023-12-27",
